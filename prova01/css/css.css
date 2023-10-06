@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* ---------- CABEÇALHO ---------- */
+header {
+    background-color: lightgray;
+    height: 30px;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav ul li {
+    list-style: none;
+    padding-top: 5px;
+}
+
+header nav ul li a {
+    padding: 8px;
+    padding-left: 40px;
+    padding-right: 40px;
+    
+    text-decoration: none;
+    color: black;
+}
+
+header nav ul li a:hover {
+    background-color: gray;
+}
+
+header nav ul li a:active {
+    padding: 20px;
+    transition: 1s;
+}
+
+.menu-dropdown {
+    display: none;
+}
+
+.link-menu:hover .menu-dropdown {
+    display: block;
+
+    width: 167px;
+    height: 98px;
+
+    padding-top: 15px;
+    background-color: lightgray;
+}
+
+
+
+/* ---------- MENU LATERAL ---------- */
+.navlist-left {
+    background-color: rgb(89, 89, 253);
+    height: 1200px;
+    width: 20vw;
+    
+    padding-top: 10px;
+    position: absolute;
+}
+
+.navlist-left a {
+    color: white;
+    text-decoration: none;
+
+    padding: 4px 8px 8px 20px;
+    display: block;
+}
+
+@media screen and (max-width: 600px) {
+    .navlist-left {
+        position: relative;
+
+        height: 30px;
+        width: 600px;
+
+        display: flex;
+    }
+    .navegador, .conteudo-pagina {
+        margin-left: 200px;
+    }
+}
+
+
+
+/* ---------- CONTEÚDO ---------- */
+main {
+    padding-top: 50px;
+    padding-left: 20vw;
+
+    text-align: center;
+    background-color: lightblue;
+
+    height: 1200px;
+    width: 80vw;
+}
+
+/* EXPLICAÇÃO DO SPINNER */
+.loader {
+    /* Definição do tamanho */
+    width: 48px;    /* Largura */
+    height: 48px;   /* Altura */
+    
+    /* Estilização da borda */
+    border: 5px solid #FFF;             /* Cor */
+    border-bottom-color: transparent;     /* Deixa a parte de baixo do círculo transparente */
+
+    /* Formato */
+    border-radius: 50%;       /* Altera o raio do quadrado, deixando-o em formato circular */
+    display: inline-block;    /* Deixa as margens superior e inferior preenchidas, formando o quadrado/círculo */
+    box-sizing: border-box;   /* Deixa o quadrado/círculo em tamanho padrão do html */
+
+    /* Animação */
+    animation: rotation 1s linear infinite; /* Tempo de duração da animação; O comando "linear infinite" deixa a animação rodando em loop infinito */
+}
+
+/* A animação a seguir rotaciona o círculo em 360 graus */
+@keyframes rotation {
+    /* As porcentagens definem o que será feito nos trechos da animação que elas correspondem */
+    0% {
+        transform: rotate(0deg);    /* Começo da animação: 0 graus rotacionados */
+    }
+    100% {
+        transform: rotate(360deg);  /* Final da animação: 360 graus rotacionados */
+    }
+}
